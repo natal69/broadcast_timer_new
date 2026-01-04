@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SERE CONTROL - FOH</title>
+    <link rel="stylesheet" href="assets/css/control.css">
+</head>
+
+<body>
+    <div id="overlay">
+    <div class="checklist-card">
+        <h3>EVENT DAY CHECKLIST</h3>
+        
+        <div class="checklist-items">
+            <label class="item">
+                <input type="checkbox" class="chk"> 
+                <span>Test internet</span>
+            </label>
+            <label class="item">
+                <input type="checkbox" class="chk"> 
+                <span>Test LAN router</span>
+            </label>
+        </div>
+
+        <button id="continueBtn" disabled>Please complete all items</button>
+    </div>
+</div>
+
+    <nav class="nav-header">
+        <a href="control.html" class="active">Control FOH</a>
+        <a href="stageDisplay.html" target="_blank">Stage Display</a>
+        <a href="audienceDisplay.html" target="_blank">Audience Display</a>
+    </nav>
+
+    <div class="main-content">
+        <div class="card">
+            <h1>SERE BROADCAST TIMER</h1>
+            <div class="field">
+                <label>Event Name:</label>
+                <input type="text" id="evName">
+            </div>
+            <div class="field">
+                <label>Current Session:</label>
+                <input type="text" id="currSess">
+            </div>
+            <div class="field">
+                <label>Timer (minutes):</label>
+                <input type="number" id="timerIn">
+            </div>
+            <div class="field">
+                <label>Next Session:</label>
+                <input type="text" id="nextSess">
+            </div>
+
+            <div class="btn-group">
+                <button id="btnStandby" class="btn-yellow">Standby</button>
+                <button id="btnStart" class="btn-green">Start</button>
+                <button id="btnPause" class="btn-gray">Pause</button>
+                <button id="btnReset" class="btn-red">Reset</button>
+            </div>
+
+            <div class="status-box">
+                <p>Status: <span id="curStatus">READY</span></p>
+                <h2 id="timer-display">00:00</h2>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        Support: Streaming Medan | 0857 6762 1240 | Instagram: @streamingmedan
+    </footer>
+
+    <script src="assets/js/control.js"></script>
+</body>
+
+</html>

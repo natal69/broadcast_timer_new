@@ -1,0 +1,41 @@
+body {
+    background: linear-gradient(135deg, #6d28d9, #1e40af);
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    color: white;
+}
+
+.center-card {
+    background: black;
+    padding: 60px 100px;
+    border-radius: 20px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+}
+
+.timer-text {
+    font-size: 15vw;
+    font-weight: bold;
+    font-variant-numeric: tabular-nums;
+}
+
+.footer {
+    position: fixed;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    opacity: 0.7;
+}
+
+.fullscreen-hint {
+    position: fixed;
+    bottom: 70px;
+    width: 100%;
+    text-align: center;
+    font-size: 0.8rem;
+    opacity: 0.4;
+}

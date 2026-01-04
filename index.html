@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sere Broadcast Timer - Loading</title>
+    <link rel="manifest" href="manifest.json">
+    <style>
+        body, html { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: #000; display: flex; align-items: center; justify-content: center; }
+        img { width: 100%; height: 100%; object-fit: cover; }
+    </style>
+</head>
+<body>
+    <img src="assets/img/WhatsApp Image 2026-01-03 at 10.43.10.jpeg" alt="Sere Branding">
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => { navigator.serviceWorker.register('service-worker.js'); });
+        }
+        setTimeout(() => { window.location.href = "control.html"; }, 5000);
+    </script>
+</body>
+</html>
