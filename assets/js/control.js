@@ -1,33 +1,3 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
-
-const firebaseConfig = {
-  https://broadcast-timer-default-rtdb.asia-southeast1.firebasedatabase.app/
-};
-
-const app = initializeApp(firebaseConfig);
-const db = getDatabase(app);
-
-function broadcast(status, time) {
-    const data = {
-        ev: document.getElementById('evName').value,
-        curr: document.getElementById('currSess').value,
-        next: document.getElementById('nextSess').value,
-        time: time || document.getElementById('timer-display').innerText,
-        status: status,
-        timestamp: Date.now() // Penting agar penerima tahu ada update baru
-    };
-    
-    // Kirim data ke Firebase di path "timer_data"
-    set(ref(db, 'timer_data'), data);
-    
-    document.getElementById('curStatus').innerText = status;
-}
-
-const bc = new BroadcastChannel("sere_stream");
-let interval,
-  totalSecs = 0;
-
 //End
 
 // Checklist Logic
